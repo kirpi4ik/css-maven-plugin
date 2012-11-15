@@ -18,19 +18,19 @@ public abstract class CssMojo extends AbstractMojo {
 	protected String			sourcedir;
 	@Parameter(required = true, readonly = true, property = "outputdir")
 	protected String			outputdir;
-	@Parameter(required = true, readonly = true, property = "sourcecss")
+	@Parameter(required = false, readonly = true, property = "sourcecss")
 	protected String			sourcecss;
-	@Parameter(required = true, readonly = true, property = "outputcss")
+	@Parameter(required = false, readonly = true, property = "outputcss")
 	protected String			outputcss;
-	@Parameter(required = true, readonly = true, property = "classAttribute")
+	@Parameter(required = false, readonly = true, property = "classAttribute")
 	protected String			classAttribute;
-	@Parameter(required = true, readonly = true, property = "cssRulePrefix")
+	@Parameter(required = false, readonly = true, property = "cssRulePrefix")
 	protected String			cssRulePrefix;
-	@Parameter(required = true, readonly = true, property = "mimeTypes")
+	@Parameter(required = false, readonly = true, property = "mimeTypes")
 	protected List<String>		mimeTypes;
-	@Parameter(required = true, readonly = true, property = "cssRulePrefixUseFileName")
+	@Parameter(required = false, readonly = true, property = "cssRulePrefixUseFileName")
 	protected boolean			cssRulePrefixUseFileName;
-	@Parameter(required = true, readonly = true, property = "optimizers")
+	@Parameter(required = false, readonly = true, property = "optimizers")
 	protected List<String>		optimizers;
 	@Component
 	protected MavenSession		session;

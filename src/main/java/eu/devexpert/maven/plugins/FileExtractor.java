@@ -61,7 +61,7 @@ public class FileExtractor implements FileVisitor<Path> {
 						if (style.indexOf("#{") == -1) {
 							String id = element.attr("id");
 							String cssName = classPrefix + (cssRulePrefixUseFileName ? fileName + "-" : "")
-									+ ((id != null && id.length() > 0) ? id : RandomStringUtils.randomAlphabetic(5));
+									+ ((id != null && id.length() > 0) ? id : RandomStringUtils.randomAlphabetic(5).toLowerCase());
 							styles.put(cssName, style);
 							String[] clss = element.attr(classAttribute).split(" ");
 							for (String cls : clss) {
