@@ -75,13 +75,13 @@ public class LessUtils {
 		compile(args, null);
 	}
 
-	public static void compile(String[] args, String output) {
+	public static void compile(String[] sourceDirs, String output) {
 		String dirParameter = null;
 
-		if (args.length < 1)
+		if (sourceDirs.length < 1)
 			dirParameter = ".";
 		else {
-			dirParameter = args[0];
+			dirParameter = sourceDirs[0];
 		}
 
 		File dir = new File(dirParameter);
@@ -107,19 +107,19 @@ public class LessUtils {
 			if (output != null) {
 				String source = output + basename + ".css";
 				try {
-					System.out.println("writing cssXXX to " + source);
+					System.out.println("writing compiled css to output: " + source);
 					FileUtils.writeStringToFile(new File(source), css);
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
-			try {
-				System.out.println("writing css to " + cssFile);
-				FileUtils.writeStringToFile(new File(cssFile), css);
-			} catch (IOException e) {
-				System.err.println("failed to write to file: " + cssFile);
-			}
+//			try {
+//				System.out.println("writing css to " + cssFile);
+//				FileUtils.writeStringToFile(new File(cssFile), css);
+//			} catch (IOException e) {
+//				System.err.println("failed to write to file: " + cssFile);
+//			}
 		}
 
 	}
