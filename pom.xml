@@ -9,6 +9,18 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+	<distributionManagement>
+		<repository>
+			<id>devexpert</id>
+			<name>RepositoryProxy</name>
+			<url>http://nexus.devexpert.eu/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>devexpert</id>
+			<name>RepositoryProxy</name>
+			<url>http://nexus.devexpert.eu/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
 	<build>
 		<plugins>
 			<plugin>
@@ -78,6 +90,10 @@
 					<localCheckout>true</localCheckout>
 					<allowTimestampedSnapshots>true</allowTimestampedSnapshots>
 				</configuration>
+			</plugin>
+			<plugin>
+			  <groupId>org.apache.maven.plugins</groupId>
+			  <artifactId>maven-deploy-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
