@@ -1,4 +1,4 @@
-author Dumitru ciubenco
+author Dumitru Ciubenco
 more info on : http://devexpert.eu/2012/11/12/css-maven-plugin/
 
 
